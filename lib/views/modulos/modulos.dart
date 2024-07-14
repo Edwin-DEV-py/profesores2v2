@@ -65,25 +65,50 @@ class _ModulosViewState extends State<ModulosView> {
                 padding: EdgeInsets.all(20),
                 child: ListView(
                   children: [
-                    itemWithImage1(context, 20 ,'INTRODUCCIÓN', 'assets/instructor.png', 0.2, () => Get.to(() => ModuloIntroduccion(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    itemWithImage1(context, 20 ,'INTRODUCCIÓN', 'assets/instructor.png', 0.2, () async {
+                      var result = await Get.to(() => ModuloIntroduccion(), transition: Transition.downToUp, duration: Duration(milliseconds: 300));
+                      if (result == true) {
+                        verificarEstadoModulos();
+                      }
+                    }),
                     SizedBox(height: 20,),
                     if (prelecturaActivo)
-                      itemWithImage1(context, 30, 'PRELECTURA', 'assets/barras.png', 0.2, () => Get.to(() => ModuloPrelectura(), transition: Transition.downToUp, duration: Duration(milliseconds: 300)))
+                    itemWithImage1(context, 30, 'PRELECTURA', 'assets/barras.png', 0.2, () async {
+                        var result = await Get.to(() => ModuloPrelectura(), transition: Transition.downToUp, duration: Duration(milliseconds: 300));
+                        if (result == true) {
+                          verificarEstadoModulos();
+                        }
+                      })
                     else
                       itemWithImage1(context, 30, 'PRELECTURA', 'assets/barras.png', 0.2, () {mostrarMensajeNoActivo();}),
                     SizedBox(height: 20),
                     if (estrategiasActivo)
-                      itemWithImage1(context, 50, 'LECTURA', 'assets/tablero.png', 0.2, () => Get.to(() => ModuloEstrategias(), transition: Transition.downToUp, duration: Duration(milliseconds: 300)))
+                    itemWithImage1(context, 50, 'LECTURA', 'assets/tablero.png', 0.2, () async {
+                        var result = await Get.to(() => ModuloEstrategias(), transition: Transition.downToUp, duration: Duration(milliseconds: 300));
+                        if (result == true) {
+                          verificarEstadoModulos();
+                        }
+                      })
                     else
                       itemWithImage1(context, 50, 'LECTURA', 'assets/tablero.png', 0.2, () {mostrarMensajeNoActivo();}),
                     SizedBox(height: 20),
                     if (postlecturaActivo)
-                      itemWithImage1(context, 24, 'POSTLECTURA', 'assets/ideas.png', 0.2, () => Get.to(() => ModuloPostlectura(), transition: Transition.downToUp, duration: Duration(milliseconds: 300)))
+                    itemWithImage1(context, 24, 'POSTLECTURA', 'assets/ideas.png', 0.2, () async {
+                        var result = await Get.to(() => ModuloPostlectura(), transition: Transition.downToUp, duration: Duration(milliseconds: 300));
+                        if (result == true) {
+                          verificarEstadoModulos();
+                        }
+                      })
                     else
                       itemWithImage1(context, 24, 'POSTLECTURA', 'assets/ideas.png', 0.2, () {mostrarMensajeNoActivo();}),
                     SizedBox(height: 20),
                     if (conclusionesActivo)
-                      itemWithImage1(context, 19, 'CONCLUSIONES', 'assets/final.png', 0.2, () => Get.to(() => ModuloConcluciones(), transition: Transition.downToUp, duration: Duration(milliseconds: 300)))
+                    itemWithImage1(context, 19, 'CONCLUSIONES', 'assets/final.png', 0.2, () async {
+                        var result = await Get.to(() => ModuloConcluciones(), transition: Transition.downToUp, duration: Duration(milliseconds: 300));
+                        if (result == true) {
+                          verificarEstadoModulos();
+                        }
+                      })
                     else
                       itemWithImage1(context, 19, 'CONCLUSIONES', 'assets/final.png', 0.2, () {mostrarMensajeNoActivo();}),
                     SizedBox(height: 20),

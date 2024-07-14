@@ -101,7 +101,7 @@ class Post2 extends StatelessWidget {
                     ),
                     SizedBox(height: 20,),
                     Widget_url_activities3(
-                      'https://forms.gle/dxw4NWMDjNoPnFG57',
+                      'https://forms.gle/8whLeQhQjVgDhgHP7',
                       'SESIÓN #1',
                       'assets/hoja.png'
                     ),

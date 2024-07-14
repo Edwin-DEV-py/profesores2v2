@@ -28,15 +28,15 @@ class ModuloEstrategias extends StatelessWidget {
                   children: [
                     itemWithImage2(context, 20,'INTRODUCCIÓN', 'assets/book.png', 0.2, () => Get.to(() => SubModuloLiteral(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 10,),
-                    itemWithImage2(context, 38,'  EN EQUIPO', 'assets/lup.png', 0.2, () => Get.to(() => SubModuloInferencial(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    itemWithImage2(context, 30,'COMPARTIDA', 'assets/lup.png', 0.2, () => Get.to(() => SubModuloInferencial(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 10,),
                     itemWithImage2(context, 18,'INDEPENDIENTE', 'assets/cerebro.png', 0.2, () => Get.to(() => SubModuloCritica(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR',
                     () async{
-                      Get.back();
                       SharedPreferences prefs = await SharedPreferences.getInstance();
                       await prefs.setBool('modulo_postlectura_activo', true);
+                      Get.back(result: true);
                     }
                     ),
                     SizedBox(height: 20,),

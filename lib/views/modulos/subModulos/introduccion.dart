@@ -119,9 +119,9 @@ class _ModuloIntroduccionState extends State<ModuloIntroduccion> {
                     SizedBox(height: 10,),
                     btnAzul1ConParametro('FINALIZAR',
                     () async{
-                      Get.back();
                       SharedPreferences prefs = await SharedPreferences.getInstance();
                       await prefs.setBool('modulo_prelectura_activo', true);
+                      Get.back(result: true);
                     }
                     )
                   ],

@@ -24,17 +24,15 @@ class _RecursosViewState extends State<RecursosView> {
                 padding: EdgeInsets.all(20),
                 child: ListView(
                   children: [
-                    itemWithDocument1(context, 'assets/pdf.png', 'Actividad #1', '8 Jun 2024','assets/act1.pdf'),
+                    itemWithDocument1(context, 'assets/pdf.png', 'Actividad Sesión #1', '8 Jun 2024','assets/SESION#1.pdf'),
                     SizedBox(height: 20,),
-                    itemWithDocument1(context, 'assets/pdf.png', 'Actividad #2', '8 Jun 2024','assets/act2.pdf'),
+                    itemWithDocument1(context, 'assets/pdf.png', 'Actividad Sesión #2', '8 Jun 2024','assets/SESION#2.pdf'),
                     SizedBox(height: 20,),
-                    itemWithDocument1(context, 'assets/pdf.png', 'Actividad #3', '8 Jun 2024','assets/act3.pdf'),
+                    itemWithDocument1(context, 'assets/pdf.png', 'Actividad Sesión #3', '8 Jun 2024','assets/SESION#3.pdf'),
                     SizedBox(height: 20,),
-                    itemWithDocument1(context, 'assets/pdf.png', 'PostLectura #1', '8 Jun 2024','assets/pos1.pdf'),
+                    itemWithDocument1(context, 'assets/pdf.png', 'Actividad Sesión #4', '8 Jun 2024','assets/SESION#4.pdf'),
                     SizedBox(height: 20,),
-                    itemWithDocument1(context, 'assets/pdf.png', 'PostLectura #2', '8 Jun 2024','assets/pos2.pdf'),
-                    SizedBox(height: 20,),
-                    itemWithDocument1(context, 'assets/pdf.png', 'PostLectura #3', '8 Jun 2024','assets/pos3.pdf'),
+                    itemWithDocument1(context, 'assets/pdf.png', 'Actividad Sesión #5', '8 Jun 2024','assets/SESION5.pdf'),
                     SizedBox(height: 20,),
                   ],
                 )

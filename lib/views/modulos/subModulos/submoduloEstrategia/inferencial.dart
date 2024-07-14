@@ -70,7 +70,7 @@ class _SubModuloInferencialState extends State<SubModuloInferencial> {
                       'assets/libro2.png',
                       'SESIÓN #5',
                       '',
-                      'assets/SESION#5.pdf'
+                      'assets/SESION5.pdf'
                     ),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR', () => Get.back()),

@@ -64,9 +64,9 @@ class _ModuloPostlecturaState extends State<ModuloPostlectura> {
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR',
                     () async{
-                      Get.back();
                       SharedPreferences prefs = await SharedPreferences.getInstance();
                       await prefs.setBool('modulo_conclusiones_activo', true);
+                      Get.back(result: true);
                     }
                     ),
                     SizedBox(height: 20,),
