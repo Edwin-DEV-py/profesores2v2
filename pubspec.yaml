@@ -1,0 +1,63 @@
+name: profesores2v2
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  curved_navigation_bar: ^1.0.5
+  dio: ^5.4.3+1
+  file_picker: ^8.0.5
+  flutter:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  get: ^4.6.6
+  path_provider: ^2.1.3
+  shared_preferences: ^2.2.3
+  url_launcher: ^6.3.0
+  youtube_player_flutter: ^9.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/portada.jpeg"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+
+    - assets/instructor.png
+    - assets/libro.png
+    - assets/tablero.png
+    - assets/ideas.png
+    - assets/final.png
+    - assets/barras.png
+    - assets/word.png
+    - assets/exel.png
+    - assets/powerpoint.png
+    - assets/maestro.png
+    - assets/mujer.png
+    - assets/quiz.png
+    - assets/book.png
+    - assets/cerebro.png
+    - assets/lup.png
+    - assets/ruleta.png
+    - assets/pdf.png
+    - assets/libro2.png
+    - assets/partes.png
+    - assets/portada.jpeg
+    - assets/p1.png
+    - assets/act1.pdf
+    - assets/act2.pdf
+    - assets/act3.pdf
+    - assets/pos1.pdf
+    - assets/pos2.pdf
+    - assets/pos3.pdf
