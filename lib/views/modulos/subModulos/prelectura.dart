@@ -96,7 +96,6 @@ class _ModuloPrelecturaState extends State<ModuloPrelectura> {
                     SizedBox(height: 10,),
                     itemWithImage2(context, 30,'SESIÓN #1', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion1(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 10,),
-                    SizedBox(height: 10,),
                     itemWithImage2(context, 30,'SESIÓN #2', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion2(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 10,),
                     itemWithImage2(context, 30,'SESIÓN #3', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion3(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),

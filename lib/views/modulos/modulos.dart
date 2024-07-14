@@ -7,7 +7,6 @@ import 'package:profesores2v2/components/titulos.dart';
 import 'package:profesores2v2/views/modulos/subModulos/concluciones.dart';
 import 'package:profesores2v2/views/modulos/subModulos/estrategias.dart';
 import 'package:profesores2v2/views/modulos/subModulos/introduccion.dart';
-import 'package:profesores2v2/views/modulos/subModulos/lectura.dart';
 import 'package:profesores2v2/views/modulos/subModulos/poslectura.dart';
 import 'package:profesores2v2/views/modulos/subModulos/prelectura.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -39,7 +38,6 @@ class _ModulosViewState extends State<ModulosView> {
     setState(() {
       prelecturaActivo = prefs.getBool('modulo_prelectura_activo') ?? false;
       estrategiasActivo = prefs.getBool('modulo_estrategias_activo') ?? false;
-      lecturaActivo = prefs.getBool('modulo_lectura_activo') ?? false;
       postlecturaActivo = prefs.getBool('modulo_postlectura_activo') ?? false;
       conclusionesActivo = prefs.getBool('modulo_conclusiones_activo') ?? false;
     });
@@ -75,14 +73,9 @@ class _ModulosViewState extends State<ModulosView> {
                       itemWithImage1(context, 30, 'PRELECTURA', 'assets/barras.png', 0.2, () {mostrarMensajeNoActivo();}),
                     SizedBox(height: 20),
                     if (estrategiasActivo)
-                      itemWithImage1(context, 28, 'ESTRATEGIAS', 'assets/tablero.png', 0.2, () => Get.to(() => ModuloEstrategias(), transition: Transition.downToUp, duration: Duration(milliseconds: 300)))
+                      itemWithImage1(context, 50, 'LECTURA', 'assets/tablero.png', 0.2, () => Get.to(() => ModuloEstrategias(), transition: Transition.downToUp, duration: Duration(milliseconds: 300)))
                     else
-                      itemWithImage1(context, 28, 'ESTRATEGIAS', 'assets/tablero.png', 0.2, () {mostrarMensajeNoActivo();}),
-                    SizedBox(height: 20),
-                    if (lecturaActivo)
-                      itemWithImage1(context, 50, 'LECTURA', 'assets/libro.png', 0.2, () => Get.to(() => ModuloLectura(), transition: Transition.downToUp, duration: Duration(milliseconds: 300)))
-                    else
-                      itemWithImage1(context, 50, 'LECTURA', 'assets/libro.png', 0.2, () {mostrarMensajeNoActivo();}),
+                      itemWithImage1(context, 50, 'LECTURA', 'assets/tablero.png', 0.2, () {mostrarMensajeNoActivo();}),
                     SizedBox(height: 20),
                     if (postlecturaActivo)
                       itemWithImage1(context, 24, 'POSTLECTURA', 'assets/ideas.png', 0.2, () => Get.to(() => ModuloPostlectura(), transition: Transition.downToUp, duration: Duration(milliseconds: 300)))

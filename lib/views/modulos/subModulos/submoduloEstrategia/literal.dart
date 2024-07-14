@@ -7,6 +7,11 @@ import 'package:profesores2v2/components/items.dart';
 import 'package:profesores2v2/components/textos.dart';
 import 'package:profesores2v2/components/titulos.dart';
 import 'package:profesores2v2/components/urls.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPoslectura/sesion1.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPoslectura/sesion2.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPoslectura/sesion3.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPoslectura/sesion4.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPoslectura/sesion5.dart';
 
 class SubModuloLiteral extends StatefulWidget {
   const SubModuloLiteral({super.key});
@@ -28,139 +33,51 @@ class _SubModuloLiteralState extends State<SubModuloLiteral> {
                 child: ListView(
                   shrinkWrap: true,
                   children: [
-                    titulos1('ESTRATEGIAS DIMENSION LITERAL'),
+                    titulos1('DURANTE LA LECTURA'),
                     SizedBox(height: 10,),
                     textoParrafosJustificado(
-                      'Este módulo se centra en la comprensión literal del texto, que implica la identificación y recordación de hechos explícitos y detalles mencionados en el texto.'
+                      'Este módulo presenta actividades en grupo y actividades individuales para que los estudiantes practiquen la lectura y apliquen las estrategias aprendidas.'
                     ),
                     textoParrafosJustificado(
-                      'Utilizamos estrategias basadas en las propuestas de Isabel Solé (1998) para la identificación de ideas principales y secundarias. Estas estrategias son fundamentales para la comprensión literal, ya que permiten a los estudiantes discernir la información más relevante del texto, lo que es el primer paso hacia una comprensión más profunda.'
+                      'Nos basamos en las estrategias propuestas por Isabel Solé (1998) para desarrollar habilidades de comprensión lectora durante la lectura.'
                     ),
-                    subTitulos('Aspectos clave destacados por Isabel Solé:'),
-                    Padding(
-                        padding: EdgeInsets.only(left: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(height: 5.0),
-                            textodobleconNegrilla(
-                              'Fijarse en Determinados Aspectos del Texto:',
-                              'Solé sugiere ayudar a los estudiantes a prestar atención a aspectos específicos del texto que pueden activar su conocimiento previo. Esto incluye la estrategia de colores y subrayado para resaltar información importante.'
-                            ),
-                            SizedBox(height: 5.0),
-                            textodobleconNegrilla(
-                              'Estrategia de Colores y Subrayado:',
-                              'Utilizar diferentes colores para subrayar títulos, subtítulos, palabras clave, términos desconocidos y detalles llamativos. Esta técnica facilita la organización visual y la retención de la información.'
-                            ),
-                            SizedBox(height: 5.0),
-                            textodobleconNegrilla(
-                              'Investigación Previa a la Lectura:',
-                              'Antes de leer, se anima a los estudiantes a investigar términos desconocidos utilizando un diccionario, explorar el autor y su estilo de escritura, y buscar información relacionada con el tema del texto. Esto enriquece su comprensión y les proporciona un contexto más amplio.'
-                            ),
-                            SizedBox(height: 5.0),
-                            textodobleconNegrilla(
-                              'Incentivar a Opinar y Predecir:',
-                              'Solé enfatiza la importancia de que los estudiantes expresen sus opiniones sobre el texto y hagan predicciones sobre el contenido o la historia. Esto no solo involucra a los estudiantes activamente, sino que también establece expectativas y prepara su mente para la lectura.'
-                            )
-                          ],
-                        ),
-                      ),
+                    textoParrafosJustificado(
+                      'La práctica con textos de diferentes niveles de dificultad permite a los estudiantes desarrollar gradualmente sus habilidades de comprensión lectora.'
+                    ),
+                    SizedBox(height: 10,),
+                    textodobleconNegrillaSinPunto(
+                      '1.Lectura Compartida:',
+                      'Solé enfatiza la importancia de la lectura compartida, que puede incluir leer en grupo de estudiantes, leer con el profesor, lectura silenciosa o en voz alta, y lectura fraccionada o por partes. Estas modalidades de lectura fomentan la colaboración y el apoyo mutuo, ayudando a los estudiantes a abordar textos complejos con mayor confianza. Además, siguiendo las tareas de lectura compartida en el aula, el docente debe hacer un resumen de lo leído en el tablero, pedir aclaraciones o explicaciones sobre dudas que plantea el texto, y hacer preguntas explícitas sobre la lectura (nivel literal). Después de estos pasos, el docente debe establecer predicciones sobre lo que queda por leer, repitiendo el ciclo de lectura, resumen, aclaraciones y predicciones.'
+                    ),
+                    SizedBox(height: 10,),
+                    textodobleconNegrillaSinPunto(
+                      '2.Lectura Independiente:',
+                      'La lectura independiente es esencial para que los estudiantes desarrollen su autonomía y confianza en sus habilidades de comprensión. Solé sugiere que los estudiantes practiquen la lectura por su cuenta, aplicando las estrategias aprendidas para mejorar su comprensión de manera continua. Para complementar esta práctica, las reglas de lectura independiente incluyen predecir (el docente formula predicciones), clarificar dudas sobre lo que se ha comprendido (control de la comprensión, metacognición), preguntar sobre lo que se ha leído, y recapitular (verificación de hipótesis y hacer predicciones nuevamente).'
+                    ),
+                    SizedBox(height: 10,),
+                    textodobleconNegrillaSinPunto(
+                      '3.Lectura Guiada por el Docente:',
+                      'La lectura guiada es una estrategia donde el docente facilita la comprensión del texto, proporcionando apoyo y orientación mientras los estudiantes leen. Esto puede incluir explicar vocabulario, aclarar conceptos difíciles y hacer preguntas que promuevan la reflexión y el análisis. Este enfoque incluye formular predicciones sobre el texto, plantearse preguntas sobre lo que se ha leído, aclarar dudas acerca del texto y resumir las ideas del texto.'
+                    ),
+                    SizedBox(height: 10,),
+                    textodobleconNegrillaSinPunto(
+                      '4.Normalizar la Dificultad y Desglosar el Texto:',
+                      'Solé también destaca que es normal no entender algo a la primera lectura. En tales casos, se recomienda desglosar el texto mediante preguntas y esperar respuestas para una mejor comprensión. Esta técnica ayuda a los estudiantes a enfrentar desafíos de lectura sin frustración y a desarrollar habilidades críticas para analizar y entender textos complejos.'
+                    ),
                     SizedBox(height: 20,),
-                    titulos2('HERRAMIENTAS'),
-                    SizedBox(height: 10,),
-                    textoParrafosJustificado(
-                      '1.Resaltado en Línea: Aplicaciones como Adobe Acrobat Reader o herramientas de resaltado en Google Docs.'
-                    ),
-                    textoParrafosJustificado(
-                      '2.Paleta de Colores: Utilizar colores específicos para resaltar información importante:'
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(height: 5.0),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(fontSize: 16.0, color: Colors.black),
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: '• Rojo:',
-                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
-                                ),
-                                TextSpan(
-                                  text: 'Títulos y subtítulos. Ayuda a identificar las secciones principales del texto.',
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 5.0),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(fontSize: 16.0, color: Colors.black),
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: '•  Amarillo:',
-                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.yellow),
-                                ),
-                                TextSpan(
-                                  text: 'Palabras clave y conceptos importantes. Destaca la información central del contenido.',
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 5.0),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(fontSize: 16.0, color: Colors.black),
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: '• Verde:',
-                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
-                                ),
-                                TextSpan(
-                                  text: 'Términos desconocidos y nuevas palabras. Facilita la revisión y el aprendizaje de nuevo vocabulario.',
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 5.0),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(fontSize: 16.0, color: Colors.black),
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: '• Azul:',
-                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-                                ),
-                                TextSpan(
-                                  text: 'Detalles llamativos o información que despierta interés. Ayuda a recordar aspectos particulares del texto.',
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 5.0),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(fontSize: 16.0, color: Colors.black),
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: '• Naranja:',
-                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.orange),
-                                ),
-                                TextSpan(
-                                  text: 'Preguntas y predicciones. Se utiliza para anotar reflexiones y anticipaciones sobre el contenido.',
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 10,),
-                    itemsReferencia(context),
+                    video_show('JkfW0g6AJWw'),
                     SizedBox(height: 20,),
-                    video_show('VONs09PzZEA'),
+                    titulos2('PREGUNTAS PARA LAS SESIONES'),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #1', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion1(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #2', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion2(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #3', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion3(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #4', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion4(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #5', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion5(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR', () => Get.back()),
                     SizedBox(height: 20,),
