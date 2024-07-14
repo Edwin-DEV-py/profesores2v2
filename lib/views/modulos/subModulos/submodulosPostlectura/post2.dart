@@ -3,10 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:profesores2v2/components/botones.dart';
-import 'package:profesores2v2/components/items.dart';
 import 'package:profesores2v2/components/textos.dart';
 import 'package:profesores2v2/components/titulos.dart';
-import 'package:profesores2v2/views/modulos/recursos.dart';
+import 'package:profesores2v2/components/urls.dart';
 
 class Post2 extends StatelessWidget {
   const Post2({super.key});
@@ -25,39 +24,111 @@ class Post2 extends StatelessWidget {
                   shrinkWrap: true,
                   children: [
                     textoParrafosJustificado(
-                      'En este módulo, los estudiantes serán evaluados para identificar si sus habilidades de comprensión lectora han mejorado, mediante diversas actividades y un pos-test.'
+                      'Un resumen es una versión breve de un texto que captura las ideas principales y las transmite de manera concisa. Sirve para entender y recordar la información más importante del texto original.'
                     ),
-                    textoParrafosJustificado(
-                      'Nos basamos en las estrategias de evaluación y consolidación de la comprensión lectora descritas por Isabel Solé (1998) para desarrollar este módulo. '
-                    ),
-                    textoParrafosJustificado(
-                      'Evaluar la comprensión después de la lectura es fundamental para medir el progreso y ajustar las estrategias pedagógicas según sea necesario.'
+                    subTitulos2(
+                      'Para realizar un resumen efectivo, responde las siguientes preguntas:'
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 20.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(height: 5.0),
-                          textodobleconNegrilla(
-                            'Buscar e Identificar la Idea Principal: ',
-                            'Solé sugiere enseñar a los estudiantes a buscar e identificar la idea principal del texto. Esta habilidad es crucial para la comprensión global y permite a los estudiantes centrarse en la información más relevante.'
+                          SizedBox(height: 10.0),
+                          textoParrafosJustificado('1.¿Cuál es el tema de este capítulo?'),
+                          textoParrafosJustificado('2.¿Cuáles son las principales ideas que transmite?'),
+                          textoParrafosJustificado('3.¿Puedes crear un resumen que responda a estas preguntas?'),
+                          SizedBox(height: 10.0),
+                          textoParrafosJustificado('Reglas para hacer un resumen:'),
+                          textoParrafosJustificado(
+                            '1.Omitir:'
                           ),
-                          SizedBox(height: 5.0),
                           textodobleconNegrilla(
-                            'Enseñar sobre el Resumen: ',
-                            'Solé también enfatiza la importancia de enseñar a los estudiantes cómo resumir un texto. El resumen ayuda a consolidar la comprensión, permitiendo a los estudiantes expresar la información esencial del texto en sus propias palabras.'
+                            'Paso 1: ',
+                            'Desecha la información repetitiva o poco relevante.'
                           ),
-                          SizedBox(height: 5.0),
+                          textoParrafosJustificado(
+                            '2.Seleccionar:'
+                          ),
                           textodobleconNegrilla(
-                            'Formular y Responder Preguntas: ',
-                            'Formular y responder preguntas es una estrategia clave para evaluar y aprender. Solé recomienda que los estudiantes practiquen tanto la formulación de preguntas sobre el texto como la respuesta a estas. Esta técnica no solo evalúa la comprensión, sino que también promueve una reflexión más profunda y un análisis crítico del texto.'
+                            'Paso 2: ',
+                            'Escoge las ideas más importantes y significativas.'
                           ),
+                          textoParrafosJustificado(
+                            '3.Generalizar:'
+                          ),
+                          textodobleconNegrilla(
+                            'Paso 3: ',
+                            'Agrupa las ideas similares bajo un concepto general.'
+                          ),
+                          textoParrafosJustificado(
+                            '4.Construir:'
+                          ),
+                          textodobleconNegrilla(
+                            'Paso 4: ',
+                            'Elabora un párrafo cohesivo que contenga las ideas seleccionadas.'
+                          ),
+                          SizedBox(height: 10.0),
+                          textoParrafosJustificado('Es necesario:'),
+                          textodobleconNegrilla(
+                            'Aprender a encontrar el tema del párrafo: ',
+                            'Identifica el tema central que abarca el párrafo.'
+                          ),
+                          SizedBox(height: 10.0),
+                          textodobleconNegrilla(
+                            'Aprender a desechar información repetitiva: ',
+                            'Elimina detalles que no aportan valor adicional.'
+                          ),
+                          SizedBox(height: 10.0),
+                          textodobleconNegrilla(
+                            'Aprender a agrupar ideas: ',
+                            'Determina cómo las ideas se relacionan entre sí y encuentra formas de englobarlas bajo conceptos más amplios'
+                          )
                         ],
                       ),
                     ),
                     SizedBox(height: 10.0),
-                    itemLectura(context, () => Get.to(RecursosView())),
+                    titulos2('PREGUNTAS'),
+                    SizedBox(height: 10.0),
+                    textoParrafosJustificado(
+                      '1.¿Cuál es el tema principal del texto leído?'
+                    ),
+                    textoParrafosJustificado(
+                      '2.¿Cuáles son las principales ideas que transmite?'
+                    ),
+                    textoParrafosJustificado(
+                      '3.Considera de realizar un resumen que responda las preguntas anteriores'
+                    ),
+                    SizedBox(height: 20,),
+                    Widget_url_activities3(
+                      'https://forms.gle/dxw4NWMDjNoPnFG57',
+                      'SESIÓN #1',
+                      'assets/hoja.png'
+                    ),
+                    SizedBox(height: 20,),
+                    Widget_url_activities3(
+                      'https://forms.gle/LLwPnFbNmc5s9QJg9',
+                      'SESIÓN #2',
+                      'assets/hoja.png'
+                    ),
+                    SizedBox(height: 20,),
+                    Widget_url_activities3(
+                      'https://forms.gle/LKJ6G84r1S467T3bA',
+                      'SESIÓN #3',
+                      'assets/hoja.png'
+                    ),
+                    SizedBox(height: 20,),
+                    Widget_url_activities3(
+                      'https://forms.gle/j3jMbZZJJ6Gdreif7',
+                      'SESIÓN #4',
+                      'assets/hoja.png'
+                    ),
+                    SizedBox(height: 20,),
+                    Widget_url_activities3(
+                      'https://forms.gle/ED2rnhSyRFFBfKBS7',
+                      'SESIÓN #5',
+                      'assets/hoja.png'
+                    ),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR',
                     (){Get.back();}

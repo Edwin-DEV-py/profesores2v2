@@ -64,6 +64,103 @@ Widget Widget_url_activities(String txt){
   
 }
 
+
+//Para redirigir a un quiz2
+Widget Widget_url_activities2(String txt, String txt2){
+
+  _launchURL(String url) async {
+  if (!await launchUrl(Uri.parse(url))) {
+    throw 'No se pudo abrir la URL: $url';
+  }else{
+      await launchUrl(Uri.parse(url));
+    }
+  }
+
+  return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Row(
+            children: [
+              Image(
+              image: AssetImage('assets/form.png'),
+              fit: BoxFit.cover,
+              height: 100,
+            ),
+            SizedBox(width: 20,),
+            ElevatedButton(
+              onPressed: (){
+                _launchURL(txt);
+              }, 
+              child: Text(
+                txt2,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 10.0),
+                backgroundColor: const Color.fromARGB(255, 24, 63, 139),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            )
+            ],
+          )
+      ],
+    );
+  
+}
+
+//Para redirigir a un quiz3
+Widget Widget_url_activities3(String txt, String txt2, String txt3){
+
+  _launchURL(String url) async {
+  if (!await launchUrl(Uri.parse(url))) {
+    throw 'No se pudo abrir la URL: $url';
+  }else{
+      await launchUrl(Uri.parse(url));
+    }
+  }
+
+  return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Row(
+            children: [
+              Image(
+              image: AssetImage(txt3),
+              fit: BoxFit.cover,
+              height: 100,
+            ),
+            SizedBox(width: 20,),
+            ElevatedButton(
+              onPressed: (){
+                _launchURL(txt);
+              }, 
+              child: Text(
+                txt2,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 10.0),
+                backgroundColor: const Color.fromARGB(255, 24, 63, 139),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            )
+            ],
+          )
+      ],
+    );
+  
+}
+
 //Para redirigir a una encuesta
 Widget Widget_url_encuestas(String txt){
 
