@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:profesores2v2/components/botones.dart';
+import 'package:profesores2v2/components/items.dart';
 import 'package:profesores2v2/components/textos.dart';
 import 'package:profesores2v2/components/titulos.dart';
 
@@ -31,7 +32,46 @@ class _SubModuloInferencialState extends State<SubModuloInferencial> {
                     textoParrafosJustificado(
                       'En este módulo, el estudiante encontrará los textos correspondientes para realizar el trabajo grupal según la sesión que se esté abordando en clase. El estudiante puede descargar y visualizar el contenido de cada sesión, lo que le permitirá participar activamente y completar las actividades en clase.'
                     ),
-                    //ACA FALTAN LAS SESIONES
+                    SizedBox(height: 20,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #1',
+                      '',
+                      'assets/SESION#1.pdf'
+                    ),
+                    SizedBox(height: 10,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #2',
+                      '',
+                      'assets/SESION#2.pdf'
+                    ),
+                    SizedBox(height: 10,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #3',
+                      '',
+                      'assets/SESION#3.pdf'
+                    ),
+                    SizedBox(height: 10,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #4',
+                      '',
+                      'assets/SESION#4.pdf'
+                    ),
+                    SizedBox(height: 10,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #5',
+                      '',
+                      'assets/SESION#5.pdf'
+                    ),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR', () => Get.back()),
                     SizedBox(height: 20,),

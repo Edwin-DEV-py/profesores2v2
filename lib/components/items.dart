@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, use_build_context_synchronously, unused_local_variable
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, use_build_context_synchronously, unused_local_variable, sort_child_properties_last
 
 import 'dart:io';
 
@@ -205,4 +205,71 @@ Widget itemLectura(BuildContext context,  VoidCallback onPressed){
       ],
     ),
   );
+}
+
+Widget itemWithDocument2(BuildContext context, String rutaImagen, String text, String fecha, String pdfFilePath) {
+
+  double screenWidth = MediaQuery.of(context).size.width;
+
+  Future<void> downloadPdf(BuildContext context) async {
+    try {
+      Directory saveDirectory;
+      if (Platform.isAndroid) {
+        saveDirectory = Directory('/storage/emulated/0/Download');
+      } else if (Platform.isIOS) {
+        saveDirectory = await getApplicationDocumentsDirectory();
+      } else {
+        throw UnsupportedError('Plataforma no soportada');
+      }
+
+      final fileName = pdfFilePath.split('/').last;
+      final filePath = '${saveDirectory.path}/$fileName';
+
+      final byteData = await DefaultAssetBundle.of(context).load(pdfFilePath);
+      final file = await File(filePath).writeAsBytes(byteData.buffer.asUint8List());
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('PDF descargado correctamente en $filePath')),
+      );
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error al descargar el PDF: $e')),
+      );
+    }
+  }
+
+  return Row(
+      children: [
+        Image(
+          image: AssetImage(rutaImagen),
+          width: screenWidth * 0.2,
+        ),
+        SizedBox(width: 20),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ElevatedButton(
+              onPressed: (){
+                downloadPdf(context);
+              }, 
+              child: Text(
+                  text,
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                  ),
+                ),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+                backgroundColor: const Color.fromARGB(255, 24, 63, 139),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              )
+          ],
+        ),
+      ],
+    );
 }
