@@ -3,9 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:profesores2v2/components/botones.dart';
+import 'package:profesores2v2/components/items.dart';
 import 'package:profesores2v2/components/textos.dart';
 import 'package:profesores2v2/components/titulos.dart';
 import 'package:profesores2v2/components/urls.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPrelectura/sesion1.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPrelectura/sesion2.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPrelectura/sesion3.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPrelectura/sesion4.dart';
+import 'package:profesores2v2/views/modulos/subModulos/sesionesPrelectura/sesion5.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ModuloPrelectura extends StatefulWidget {
@@ -50,6 +56,29 @@ class _ModuloPrelecturaState extends State<ModuloPrelectura> {
                       ),
                     SizedBox(height: 10.0),
                     video_show('iDc_K8xWBjA'),
+                    SizedBox(height: 20.0),
+                    titulos2('TIPOS DE TEXTOS'),
+                    SizedBox(height: 10.0),
+                    textodobleconNegrilla(
+                      '1.Texto Narrativo:',
+                      'Consiste en relatar hechos, reales o ficticios, en un espacio y tiempo determinados. Su propósito principal es contar una historia, permitiendo al lector sumergirse en una secuencia de eventos y personajes que pueden generar emociones y reflexiones. Ejemplos comunes de textos narrativos son las novelas, los cuentos, las fábulas, los mitos y las leyendas.'
+                    ),
+                    textodobleconNegrilla(
+                      '2.Texto Descriptivo:',
+                      'Se centra en detallar las características de personas, lugares, objetos o situaciones, creando una imagen mental vívida para el lector. Este tipo de texto es crucial para pintar con palabras y permitir que el lector imagine con precisión lo que se está describiendo. Se encuentra frecuentemente en guías turísticas, retratos literarios y descripciones en informes científicos'
+                    ),
+                    textodobleconNegrilla(
+                      '3.Texto Expositivo:',
+                      'Su objetivo es presentar información de manera clara y ordenada para explicar un tema o concepto sin intentar influir en la opinión del lector. Los textos expositivos son esenciales para la divulgación de conocimientos y suelen ser objetivos y directos. Ejemplos típicos incluyen artículos enciclopédicos, manuales de instrucción y textos escolares.'
+                    ),
+                    textodobleconNegrilla(
+                      '4.Texto Argumentativo:',
+                      'Se caracteriza por presentar una idea o tesis y apoyarla con argumentos con el fin de persuadir al lector sobre una determinada postura. Este tipo de texto incluye tanto la exposición del propio punto de vista como la refutación de los puntos de vista contrarios, siendo común en ensayos, editoriales y artículos de opinión.'
+                    ),
+                    textodobleconNegrilla(
+                      '5.Texto Instructivo:',
+                      'Proporciona instrucciones claras y precisas sobre cómo realizar una tarea o proceso, organizando la información en pasos secuenciales para facilitar la comprensión. Estos textos son fundamentales en contextos donde es necesario guiar al lector en la ejecución de acciones específicas, como en recetas de cocina, manuales de usuario y guías de montaje.'
+                    ),
                     SizedBox(height: 10,),
                     titulos2('PARTES DE UN TEXTO'),
                     SizedBox(height: 10,),
@@ -62,6 +91,19 @@ class _ModuloPrelecturaState extends State<ModuloPrelectura> {
                         )
                       ],
                     ),
+                    SizedBox(height: 20,),
+                    titulos2('PREGUNTAS PARA LAS SESIONES'),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #1', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion1(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    SizedBox(height: 10,),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #2', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion2(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #3', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion3(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #4', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion4(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
+                    SizedBox(height: 10,),
+                    itemWithImage2(context, 30,'SESIÓN #5', 'assets/bombilla.png', 0.2, () => Get.to(() => Sesion5(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR',
                     () async{

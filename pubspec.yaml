@@ -55,9 +55,16 @@ flutter:
     - assets/partes.png
     - assets/portada.jpeg
     - assets/p1.png
+    - assets/encuesta.png
+    - assets/bombilla.png
     - assets/act1.pdf
     - assets/act2.pdf
     - assets/act3.pdf
     - assets/pos1.pdf
     - assets/pos2.pdf
     - assets/pos3.pdf
+    - assets/senor.png
+    - assets/cuadro.png
+    - assets/noticia.png
+    - assets/edificio.png
+    - assets/escritor.png

@@ -30,41 +30,24 @@ class _ModuloIntroduccionState extends State<ModuloIntroduccion> {
                   shrinkWrap: true,
                   children: [
                     textoParrafosJustificado(
-                      'El proyecto Léame tiene como objetivo mejorar los niveles de comprensión lectora de los estudiantes de 10º grado del Colegio I.E.R Tulapita, especialmente aquellos de estratos 1 y 2, quienes presentan dificultades en la comprensión lectora, específicamente en el área de lectura inferencial. Para ello, hemos desarrollado una aplicación móvil dividida en los siguientes módulos:'
+                      'El proyecto Léame tiene como objetivo mejorar los niveles de comprensión lectora de los estudiantes de 10º grado del Colegio I.E.R Tulapita, especialmente aquellos de estratos 1 y 2, quienes presentan dificultades en la comprensión lectora. Para ello, hemos desarrollado una aplicación móvil dividida en los siguientes módulos:'
                     ),
                     textoParrafosJustificado(
-                      '1.Introducción: Proporciona una visión general del proyecto, explicando su propósito y estructura.'
+                      '1.Introducción: Proporciona una visión general del proyecto, explicando su propósito y estructura'
                     ),
                     textoParrafosJustificado(
                       '2.Prelectura: Estrategias para preparar al lector antes de la lectura, como la activación de conocimientos previos.'
                     ),
                     textoParrafosJustificado(
-                      '3.Estrategias: Dividido en tres submódulos:'
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(left: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(height: 5.0),
-                            Text('• Estrategias Literales', style: TextStyle(fontSize: 16.0)),
-                            SizedBox(height: 5.0),
-                            Text('• Estrategias Inferenciales', style: TextStyle(fontSize: 16.0)),
-                            SizedBox(height: 5.0),
-                            Text('• Estrategias Interpretativas', style: TextStyle(fontSize: 16.0)),
-                          ],
-                        ),
-                      ),
-                    textoParrafosJustificado(
-                      '4.Lectura: Presenta textos de diferentes niveles de dificultad para ser leídos por los estudiantes.'
+                      '3.Durante la Lectura: Presenta estrategias y actividades tanto de caracter grupal como individual.'
                     ),
                     textoParrafosJustificado(
-                      '5.Postlectura: Actividades para consolidar y evaluar la comprensión lectora después de la lectura.'
+                      '4.Postlectura: Actividades para consolidar y evaluar la comprensión lectora después de la lectura.'
                     ),
                     SizedBox(height: 10,),
                     subTitulos('CONTEXTO Y ALCANCE'),
                     textoParrafosJustificado(
-                      'Este proyecto busca implementar la estrategia QEA (Quiero Entender Aprendo) para mejorar la comprensión lectora mediante el uso de la aplicación Léame. La población objetivo son los estudiantes de décimo grado del Colegio I.E.R Tulapita. Se utilizarán diversas estrategias pedagógicas basadas en investigaciones académicas para desarrollar y evaluar la comprensión lectora.'
+                      'Este proyecto busca mejorar la comprensión lectora mediante el uso de la aplicación Léame. La población objetivo son los estudiantes de décimo grado del colegio I.E.R Tulapita. Se utilizarán diversas estrategias pedagógicas basadas en investigaciones académicas para desarrollar y evaluar la comprensión lectora.'
                     ),
                     SizedBox(height: 10,),
                     subTitulos('ESTRATEGIAS UTILIZADAS BASADAS EN ISABEL SOLE'),
@@ -128,6 +111,11 @@ class _ModuloIntroduccionState extends State<ModuloIntroduccion> {
                       ),
                     SizedBox(height: 10,),
                     video_show('jFklK9CERHI'),
+                    SizedBox(height: 10,),
+                    titulos2('ENCUESTA'),
+                    SizedBox(height: 10,),
+                    Widget_url_encuestas('https://forms.gle/5UjSSeAykCVkPki57'),
+                    SizedBox(height: 10,),
                     SizedBox(height: 10,),
                     btnAzul1ConParametro('FINALIZAR',
                     () async{
