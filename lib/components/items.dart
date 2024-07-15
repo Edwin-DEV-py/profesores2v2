@@ -213,47 +213,18 @@ Widget itemWithDocument2(BuildContext context, String rutaImagen, String text, S
 
   double screenWidth = MediaQuery.of(context).size.width;
 
-  Future<void> downloadPdf(BuildContext context) async {
-    try {
-      Directory saveDirectory;
-      if (Platform.isAndroid) {
-        saveDirectory = Directory('/storage/emulated/0/Download');
-      } else if (Platform.isIOS) {
-        saveDirectory = await getApplicationDocumentsDirectory();
-      } else {
-        throw UnsupportedError('Plataforma no soportada');
-      }
-
-      final fileName = pdfFilePath.split('/').last;
-      final filePath = '${saveDirectory.path}/$fileName';
-
-      final byteData = await DefaultAssetBundle.of(context).load(pdfFilePath);
-      final file = await File(filePath).writeAsBytes(byteData.buffer.asUint8List());
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('PDF descargado correctamente en $filePath')),
-      );
-    } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error al descargar el PDF: $e')),
-      );
-    }
-  }
-
   return Row(
       children: [
         Image(
           image: AssetImage(rutaImagen),
           width: screenWidth * 0.2,
         ),
-        SizedBox(width: 20),
+        SizedBox(width: screenWidth*0.1),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ElevatedButton(
-              onPressed: (){
-                downloadPdf(context);
-              }, 
+              onPressed: () => Get.to(() => PdfView(pdfPath: pdfFilePath)),
               child: Text(
                   text,
                   style: TextStyle(
@@ -263,7 +234,7 @@ Widget itemWithDocument2(BuildContext context, String rutaImagen, String text, S
                   ),
                 ),
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+                padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 10.0),
                 backgroundColor: const Color.fromARGB(255, 24, 63, 139),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),

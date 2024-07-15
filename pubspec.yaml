@@ -9,12 +9,15 @@ environment:
 dependencies:
   curved_navigation_bar: ^1.0.5
   dio: ^5.4.3+1
+  downloads_path_provider_28: ^0.1.2
   file_picker: ^8.0.5
   flutter:
     sdk: flutter
+  flutter_file_downloader: ^2.0.0
   flutter_launcher_icons: ^0.13.1
   get: ^4.6.6
   path_provider: ^2.1.3
+  permission_handler: ^11.3.1
   shared_preferences: ^2.2.3
   syncfusion_flutter_pdfviewer: ^26.1.41
   url_launcher: ^6.3.0
