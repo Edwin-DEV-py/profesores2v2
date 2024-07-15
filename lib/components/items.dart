@@ -4,7 +4,9 @@ import 'dart:io';
 
 //import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:profesores2v2/components/pdfView.dart';
 import 'botones.dart';
 
 Widget itemWithImage1(BuildContext context,double horizontal ,String text, String rutaImagen, double sizeImage, VoidCallback onPressed){
@@ -272,4 +274,42 @@ Widget itemWithDocument2(BuildContext context, String rutaImagen, String text, S
         ),
       ],
     );
+}
+
+Widget itemWithDocument3(BuildContext context, String rutaImagen, String text, String fecha, String pdfFilePath) {
+
+  double screenWidth = MediaQuery.of(context).size.width;
+
+  return GestureDetector(
+    onTap: () => Get.to(() => PdfView(pdfPath: pdfFilePath)),
+    child: Row(
+      children: [
+        Image(
+          image: AssetImage(rutaImagen),
+          width: screenWidth * 0.2,
+        ),
+        SizedBox(width: 20),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+            Text(
+              fecha,
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
 }

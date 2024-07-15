@@ -16,6 +16,7 @@ dependencies:
   get: ^4.6.6
   path_provider: ^2.1.3
   shared_preferences: ^2.2.3
+  syncfusion_flutter_pdfviewer: ^26.1.41
   url_launcher: ^6.3.0
   youtube_player_flutter: ^9.0.1
 
