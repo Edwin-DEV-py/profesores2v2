@@ -91,6 +91,47 @@ class _ModuloPrelecturaState extends State<ModuloPrelectura> {
                         )
                       ],
                     ),
+                    titulos2('LECTURAS DE LAS SESIONES'),
+                    SizedBox(height: 20,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #1',
+                      '',
+                      'assets/SESION#1.pdf'
+                    ),
+                    SizedBox(height: 10,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #2',
+                      '',
+                      'assets/SESION#2.pdf'
+                    ),
+                    SizedBox(height: 10,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #3',
+                      '',
+                      'assets/SESION#3.pdf'
+                    ),
+                    SizedBox(height: 10,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #4',
+                      '',
+                      'assets/SESION#4.pdf'
+                    ),
+                    SizedBox(height: 10,),
+                    itemWithDocument2(
+                      context,
+                      'assets/libro2.png',
+                      'SESIÓN #5',
+                      '',
+                      'assets/SESION5.pdf'
+                    ),
                     SizedBox(height: 20,),
                     titulos2('PREGUNTAS PARA LAS SESIONES'),
                     SizedBox(height: 10,),
